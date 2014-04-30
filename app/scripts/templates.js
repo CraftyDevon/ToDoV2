@@ -86,12 +86,14 @@ $(document).ready(function() {
 		$(this).closest("li").remove();
 
 	});	
-//adding a comment just to try and push this 
+
 
 var oriVal;
 $(".thedoer").on('dblclick', 'li', function () {
     oriVal = $(this).text();
     $(this).text(" ");
+	var toChange = $(this).closest("li").data("index");
+    todayToDos.splice(toChange, 1);
     $("<input type='text'>").appendTo(this).focus();
 
     //delete current item from array
@@ -101,7 +103,17 @@ $(".thedoer").on('dblclick', 'li', function () {
 $(".thedoer").on('focusout', 'li > input', function () {
     var $this = $(this);
     $this.parent().text($this.val() || oriVal);
-    $this.remove(); // Don't just hide, remove the element.
+    $this.remove();
+
+    var todayToDosObj = {
+
+					todayDo: ($this.val() || oriVal)
+	};
+	todayToDos.unshift(todayToDosObj);
+
+//next: compile template with new data, and then add that to mark up again
+    // push or unshift then render the template
+     // Don't just hide, remove the element.
 
     //add new item to array
 });
