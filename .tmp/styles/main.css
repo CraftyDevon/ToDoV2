@@ -4587,3 +4587,15 @@ body {
 
 .line {
   text-decoration: line-through; }
+
+.completedtasks hr {
+  border-bottom: 1px solid tomato; }
+
+ul.completeditemsul li {
+  width: 80%;
+  list-style: none;
+  padding: 20px 0 20px 0;
+  border-bottom: 1px solid #797979; }
+
+ul.completeditemsul li:nth-child(1) {
+  border-bottom: none; }
