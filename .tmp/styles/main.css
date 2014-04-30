@@ -4583,10 +4583,20 @@ body {
   display: none; }
 
 .current {
-  color: green; }
+  color: tomato; }
 
 .line {
   text-decoration: line-through; }
+
+.duetodayleft {
+  margin: 20px 0 0 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+
+.duetomorrowleft {
+  margin: 20px 0 0 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px; }
 
 .completedtasks hr {
   border-bottom: 1px solid tomato; }
