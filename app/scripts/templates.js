@@ -9,9 +9,9 @@ $(document).ready(function() {
 	$(".duetodayul").append(todayDo);
 	$(".duetomorrowul").append(tomorrowDo);
 	$(".completeditemsul").append(completedDo);
-	// $(".duetodayleft").append(todayToDos.length + " To-Do(s) left");
+	 $(".duetodayleft").append(todayToDos.length + " To-Do(s) left");
 
-	// $(".duetomorrowleft").append(tomorrowToDos.length + " To-Do(s) left");
+	 $(".duetomorrowleft").append(tomorrowToDos.length + " To-Do(s) left");
 
 
 
@@ -30,7 +30,7 @@ $(document).ready(function() {
 
 	var todayTaskString = _.template($("#todayTmpl").html(), todayToDos);
 
-	$(".taskToday").val(" ");
+	$(".taskToday").val("What's your to-do for today?");
 	$(".duetodayul").html(todayTaskString);
 	$(".duetodayleft").html(todayToDos.length + " To-Do(s) left");
 
@@ -52,9 +52,9 @@ $(document).ready(function() {
 
 	var tomorrowTaskString = _.template($("#tomorrowTmpl").html(), tomorrowToDos);
 
-	$(".taskTomorrow").val(" ");
+	$(".taskTomorrow").val("What's your to-do for tomorrow?");
 	$(".duetomorrowul").html(tomorrowTaskString);
-	//$(".duetomorrowleft").html(tomorrowToDos.length + " To-Do(s) left");
+	$(".duetomorrowleft").html(tomorrowToDos.length + " To-Do(s) left");
 
 	
 	});
