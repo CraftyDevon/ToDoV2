@@ -12,6 +12,7 @@ $(document).ready(function() {
 	 $(".duetodayleft").append(todayToDos.length + " To-Do(s) left");
 
 	 $(".duetomorrowleft").append(tomorrowToDos.length + " To-Do(s) left");
+	 $(".completeleft").append(completedToDos.length + " To-Do(s) complete");
 
 
 
@@ -72,8 +73,9 @@ $(document).ready(function() {
 		$(".completeditemsul").append(completedTask);
 		var toRemove = $(this).closest("li").data("index");
 		console.log(toRemove);
-		var removeThis = todayToDos.indexOf(toRemove);
-		todayToDos.splice(removeThis, 1);
+		todayToDos.splice(toRemove, 1);
+			$(".completeleft").html(completedToDos.length + " To-Do(s) completed");
+
 	});
 
 
@@ -86,18 +88,23 @@ $(document).ready(function() {
 	});	
 //adding a comment just to try and push this 
 
-//click to edit <li>
-// var oriVal;
-// $(".thedoer").on('dblclick', 'li', function () {
-//     oriVal = $(this).text();
-//     $(this).text("");
-//     $("<input type='text'>").appendTo(this).focus();
-// });
-// $(".thedoer").on('focusout', 'li > input', function () {
-//     var $this = $(this);
-//     $this.parent().text($this.val() || oriVal);
-//     $this.remove(); // Don't just hide, remove the element.
-// });
+var oriVal;
+$(".thedoer").on('dblclick', 'li', function () {
+    oriVal = $(this).text();
+    $(this).text(" ");
+    $("<input type='text'>").appendTo(this).focus();
+
+    //delete current item from array
+
+
+});
+$(".thedoer").on('focusout', 'li > input', function () {
+    var $this = $(this);
+    $this.parent().text($this.val() || oriVal);
+    $this.remove(); // Don't just hide, remove the element.
+
+    //add new item to array
+});
 
 
 });
