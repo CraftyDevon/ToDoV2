@@ -2,7 +2,7 @@ var todayToDos = [
 
 
 	{
-		todayDo: "Find a sea turtle",
+		todayDo: "Find a sea turtle and love it",
 	}
 
 
