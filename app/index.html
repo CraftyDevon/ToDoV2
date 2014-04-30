@@ -25,7 +25,7 @@
 
 
         
-            <li class="toDoItem"> <span class="glyphicon glyphicon-ok finishedItem"></span>
+            <li data-index="<%= index %>" class="toDoItem"> <span class="glyphicon glyphicon-ok finishedItem"></span>
             <span class="glyphicon glyphicon-remove removeToDo"></span>
 
             <%= todayToDos.todayDo %>  </li>
@@ -34,7 +34,7 @@
     <% }); %>
 
 
-</script>
+        </script>
 
 <script type ="template/html" id="tomorrowTmpl">
 
@@ -58,7 +58,7 @@
 
 
 
-            <li> <%= completedToDos.completedDo %> </li>
+            <li data-index="<%= index %>"> <%= completedToDos.completedDo %> </li>
 
 
     <% }); %>

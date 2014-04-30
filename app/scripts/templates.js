@@ -26,13 +26,13 @@ $(document).ready(function() {
 					todayDo: todayTask
 	};
 
-	todayToDos.unshift(todayToDosObj);
+	todayToDos.push(todayToDosObj);
 
 	var todayTaskString = _.template($("#todayTmpl").html(), todayToDos);
 
 	$(".taskToday").val("What's your to-do for today?");
 	$(".duetodayul").html(todayTaskString);
-	$(".duetodayleft").html(todayToDos.length + " To-Do(s) left");
+	//$(".duetodayleft").html(todayToDos.length + " To-Do(s) left");
 
 
 	});
@@ -70,6 +70,10 @@ $(document).ready(function() {
 		$(this).closest("li").addClass("line");
 		var completedTask = $(this).closest("li");
 		$(".completeditemsul").append(completedTask);
+		var toRemove = $(this).closest("li").data("index");
+		console.log(toRemove);
+		var removeThis = todayToDos.indexOf(toRemove);
+		todayToDos.splice(removeThis, 1);
 	});
 
 
@@ -80,7 +84,20 @@ $(document).ready(function() {
 		$(this).closest("li").remove();
 
 	});	
-//adding a comment just to try and push this again
+//adding a comment just to try and push this 
+
+//click to edit <li>
+// var oriVal;
+// $(".thedoer").on('dblclick', 'li', function () {
+//     oriVal = $(this).text();
+//     $(this).text("");
+//     $("<input type='text'>").appendTo(this).focus();
+// });
+// $(".thedoer").on('focusout', 'li > input', function () {
+//     var $this = $(this);
+//     $this.parent().text($this.val() || oriVal);
+//     $this.remove(); // Don't just hide, remove the element.
+// });
 
 
 });
