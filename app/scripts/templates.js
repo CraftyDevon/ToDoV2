@@ -9,7 +9,9 @@ $(document).ready(function() {
 	$(".duetodayul").append(todayDo);
 	$(".duetomorrowul").append(tomorrowDo);
 	$(".completeditemsul").append(completedDo);
+	// $(".duetodayleft").append(todayToDos.length + " To-Do(s) left");
 
+	// $(".duetomorrowleft").append(tomorrowToDos.length + " To-Do(s) left");
 
 
 
@@ -30,6 +32,7 @@ $(document).ready(function() {
 
 	$(".taskToday").val(" ");
 	$(".duetodayul").html(todayTaskString);
+	$(".duetodayleft").html(todayToDos.length + " To-Do(s) left");
 
 
 	});
@@ -51,6 +54,7 @@ $(document).ready(function() {
 
 	$(".taskTomorrow").val(" ");
 	$(".duetomorrowul").html(tomorrowTaskString);
+	//$(".duetomorrowleft").html(tomorrowToDos.length + " To-Do(s) left");
 
 	
 	});
@@ -60,12 +64,12 @@ $(document).ready(function() {
 
 
 	//strikes through the complete task and adds it to complete array
-$(".thedoer").on("click", ".finishedItem", function(){
+	$(".thedoer").on("click", ".finishedItem", function(){
 		// var total = completedToDos.push();
 		// console.log (total);
 		$(this).closest("li").addClass("line");
 		var completedTask = $(this).closest("li");
-		$(".completedtasks").append(completedTask);
+		$(".completeditemsul").append(completedTask);
 	});
 
 
