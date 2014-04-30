@@ -38,11 +38,12 @@
 
 <script type ="template/html" id="tomorrowTmpl">
 
-    <% _.each(tomorrowToDos, function(post, index, list) { %>
+    <% _.each(tomorrowToDos, function(tomorrowToDos, index, list) { %>
 
 
 
-            <li class="toDoItem"> <%= tomorrowToDos.tomorrowDo %> </li>
+            <li class="toDoItem"><span class="glyphicon glyphicon-ok finishedItem"></span>
+            <span class="glyphicon glyphicon-remove removeToDo"> <%= tomorrowToDos.tomorrowDo %> </li>
 
 
     <% }); %>
@@ -131,6 +132,8 @@
 
 
                     <div class="completedtasks">
+
+                        <hr>
                     
                     <ul class="completeditemsul dos"></ul>
                       

@@ -37,7 +37,7 @@ $(document).ready(function() {
 		//Tomorrow Submit
 	$("#tomorrowtodoSubmit").submit (function(e) {
 	e.preventDefault();
-
+	
 	var tomorrowTask = $(".taskTomorrow").val();
 
 	var tomorrowToDosObj = {
@@ -52,14 +52,15 @@ $(document).ready(function() {
 	$(".taskTomorrow").val(" ");
 	$(".duetomorrowul").html(tomorrowTaskString);
 
-
+	
 	});
 
 
 
 
+
 	//strikes through the complete task and adds it to complete array
-$(".duetoday").on("click", ".finishedItem", function(){
+$(".thedoer").on("click", ".finishedItem", function(){
 		// var total = completedToDos.push();
 		// console.log (total);
 		$(this).closest("li").addClass("line");
