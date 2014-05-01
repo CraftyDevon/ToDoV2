@@ -48,14 +48,14 @@
 
 
 
-            <li class="toDoItem"><span class="glyphicon glyphicon-ok finishedItem"></span>
-            <span class="glyphicon glyphicon-remove removeToDo"> <%= tomorrowToDos.tomorrowDo %> </li>
+           <li class="toDoItem"><span class="glyphicon glyphicon-ok finishedItem"></span>
+           <span class="glyphicon glyphicon-remove removeToDo"> <%= tomorrowToDos.tomorrowDo %> </li>
 
 
     <% }); %>
 
 
-</script>
+ </script>
 
 
 <script type ="template/html" id="completeTmpl">
@@ -92,13 +92,15 @@
 
 
                         <ul class="switcher">
-                            <li><a href="#" class="duetodayLink">Due Today</a></li>
-                            <li><a href="#" class="duetomorrowLink">Due Tomorrow</a></li>
+                            <li><a href="#" class="duetodayLink">Today</a></li>
+                            <li><a href="#" class="duetomorrowLink">All</a></li> 
                             <li><a href="#" class="completedtasksLink">Completed</a></li>
                         </ul>
 
 
-                    </div><!--end do switcher-->
+                    </div>
+
+                    <!--end do switcher-->
 
                     
 
@@ -122,7 +124,7 @@
 
                     </div><!--end due today-->
 
-                    <div class="duetomorrow">
+                     <div class="duetomorrow">
 
 
 
@@ -140,7 +142,9 @@
 
                     
 
-                    </div><!--end due tomorrow-->
+                    </div> 
+
+                    <!--end due tomorrow -->
 
 
                     <div class="completedtasks">
@@ -151,11 +155,11 @@
                     <ul class="completeditemsul dos"></ul>
                       
 
-                    </div><!--end completed tasks-->
+                    </div><!--end completed tasks -->
                     
 
 
-                </div><!--end the to-doer-->
+                </div> <!--end the to-doer-->
 
            
 
