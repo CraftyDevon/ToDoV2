@@ -90,7 +90,7 @@ $(document).ready(function() {
 		todayToDos.splice(toRemove, 1);
 		//splice tomorrowToDos in the morning here
 			//$(".completeleft").html(completedToDos.length + " To-Do(s) completed");
-
+			$(".duetodayleft").html(todayToDos.length + " To-Do(s) left");
 	});
 
 $(".reset").click(function(event){
@@ -138,3 +138,4 @@ $(".thedoer").on('focusout', 'li > input', function () {
 
 
 });
+
