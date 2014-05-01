@@ -9,10 +9,10 @@ $(document).ready(function() {
 	$(".duetodayul").append(todayDo);
 	$(".duetomorrowul").append(tomorrowDo);
 	$(".completeditemsul").append(completedDo);
-	 $(".duetodayleft").append(todayToDos.length + " To-Do(s) left");
+	 //$(".duetodayleft").append(todayToDos.length + " To-Do(s) left");
 
-	 $(".duetomorrowleft").append(tomorrowToDos.length + " To-Do(s) left");
-	 $(".completeleft").append(completedToDos.length + " To-Do(s) complete");
+	 // $(".duetomorrowleft").append(tomorrowToDos.length + " To-Do(s) left");
+	 // $(".completeleft").append(completedToDos.length + " To-Do(s) complete");
 
 
 
@@ -84,7 +84,7 @@ $(document).ready(function() {
 		var toRemove = $(this).closest("li").data("index");
 		console.log(toRemove);
 		todayToDos.splice(toRemove, 1);
-			$(".completeleft").html(completedToDos.length + " To-Do(s) completed");
+			//$(".completeleft").html(completedToDos.length + " To-Do(s) completed");
 
 	});
 
