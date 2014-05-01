@@ -16,7 +16,7 @@ $(document).ready(function() {
 
 
 
-	//Today Submit
+	//Today Submit 
 	$("#todaytodoSubmit").submit (function(e) {
 	e.preventDefault();
 
@@ -28,12 +28,20 @@ $(document).ready(function() {
 	};
 
 	todayToDos.push(todayToDosObj);
+	tomorrowToDos.push(todayToDosObj);
 
 	var todayTaskString = _.template($("#todayTmpl").html(), todayToDos);
 
 	$(".taskToday").val("What's your to-do for today?");
 	$(".duetodayul").html(todayTaskString);
+	$(".duetomorrowul").html(todayTaskString);
 	//$(".duetodayleft").html(todayToDos.length + " To-Do(s) left");
+
+	// var tomorrowToDosObj = {
+
+	// 				tomorrowDo: tomorrowTask
+	// };
+
 
 
 	});

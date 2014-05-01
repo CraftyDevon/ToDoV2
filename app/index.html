@@ -45,11 +45,11 @@
 <script type ="template/html" id="tomorrowTmpl">
 
     <% _.each(tomorrowToDos, function(tomorrowToDos, index, list) { %>
+            <li data-index="<%= index %>"> <%= tomorrowToDos.tomorrowDo %> </li>
 
 
-
-           <li class="toDoItem"><span class="glyphicon glyphicon-ok finishedItem"></span>
-           <span class="glyphicon glyphicon-remove removeToDo"> <%= tomorrowToDos.tomorrowDo %> </li>
+           // <li class="toDoItem"><span class="glyphicon glyphicon-ok finishedItem"></span>
+           // <span class="glyphicon glyphicon-remove removeToDo"> <%= tomorrowToDos.tomorrowDo %> </li>  
 
 
     <% }); %>
@@ -128,13 +128,7 @@
 
 
 
-                    <form action="">
-                        
-                        <input type="text" placeholder="What's your to-do for tomorrow?">
-
-                        <button type="submit" class="addtask">ADD</button>
-
-                    </form>
+                    
 
                  <div class="duetomorrowleft"></div>
 
