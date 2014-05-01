@@ -35,7 +35,8 @@ $(document).ready(function() {
 	$(".taskToday").val("What's your to-do for today?");
 	$(".duetodayul").html(todayTaskString);
 	$(".duetomorrowul").html(todayTaskString);
-	//$(".duetodayleft").html(todayToDos.length + " To-Do(s) left");
+
+	$(".duetodayleft").html(todayToDos.length + " To-Do(s) left");
 
 	// var tomorrowToDosObj = {
 
