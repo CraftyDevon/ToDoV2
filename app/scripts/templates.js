@@ -36,6 +36,7 @@ $(document).ready(function() {
 	$(".duetodayul").html(todayTaskString);
 	$(".duetomorrowul").html(todayTaskString);
 
+	//will count up, but not down. yet
 	$(".duetodayleft").html(todayToDos.length + " To-Do(s) left");
 
 	// var tomorrowToDosObj = {
@@ -64,7 +65,7 @@ $(document).ready(function() {
 
 	$(".taskTomorrow").val("What's your to-do for tomorrow?");
 	$(".duetomorrowul").html(tomorrowTaskString);
-	$(".duetomorrowleft").html(tomorrowToDos.length + " To-Do(s) left");
+	//$(".duetomorrowleft").html(tomorrowToDos.length + " To-Do(s) left");
 
 	
 	});
@@ -87,7 +88,9 @@ $(document).ready(function() {
 
 	});
 
-
+$(".reset").click(function(event){
+  		$(".completeditemsul").empty();
+  	});
 
 
 	//removes the to-do
@@ -122,6 +125,7 @@ $(".thedoer").on('focusout', 'li > input', function () {
 
 //next: compile template with new data, and then add that to mark up again
     // push or unshift then render the template
+     
      // Don't just hide, remove the element.
 
     //add new item to array
