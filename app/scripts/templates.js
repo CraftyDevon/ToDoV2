@@ -32,13 +32,13 @@ $(document).ready(function() {
 
 	var todayTaskString = _.template($("#todayTmpl").html(), todayToDos);
 
-	$(".taskToday").val("What's your to-do for today?");
+	$(".taskToday").val(" ");
 	$(".duetodayul").html(todayTaskString);
 	$(".duetomorrowul").html(todayTaskString);
 
 	//will count up, but not down. yet
 	$(".duetodayleft").html(todayToDos.length + " To-Do(s) left");
-
+	
 	// var tomorrowToDosObj = {
 
 	// 				tomorrowDo: tomorrowTask
@@ -54,6 +54,7 @@ $(document).ready(function() {
 	
 	var tomorrowTask = $(".taskTomorrow").val();
 
+	
 	var tomorrowToDosObj = {
 
 					tomorrowDo: tomorrowTask
@@ -79,11 +80,15 @@ $(document).ready(function() {
 		// var total = completedToDos.push();
 		// console.log (total);
 		$(this).closest("li").addClass("line");
+		//$(this).find("li.tomItem").addClass("line");
 		var completedTask = $(this).closest("li");
 		$(".completeditemsul").append(completedTask);
+
+		//$(".duetomorrowul").append(completedTask);
 		var toRemove = $(this).closest("li").data("index");
 		console.log(toRemove);
 		todayToDos.splice(toRemove, 1);
+		//splice tomorrowToDos in the morning here
 			//$(".completeleft").html(completedToDos.length + " To-Do(s) completed");
 
 	});
