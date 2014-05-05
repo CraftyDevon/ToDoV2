@@ -80,32 +80,35 @@
 
 
         <div class="container">
-            <div class="header">
+            
+
+                <div class="thedoer">
+                    <div class="header">
 
                 <h1>The Doer Brothers GTD App</h1>
               
             </div><!--end header-->
+    
+                    <div class="row">
 
-                <div class="thedoer">
-
+                    <div class="col-md-3 pull-left">
                     <div class="doswitcher">
+
+                        <p>Built by Mike Ressner and Devon Hicks, this app is meant to help you get everything done. It's memory is a bit faulty though, so make sure to not close it out.</p>
 
 
                         <ul class="switcher">
-                            <li><a href="#" class="duetodayLink">Today</a></li>
-                            <li><a href="#" class="duetomorrowLink">All</a></li> 
-                            <li><a href="#" class="completedtasksLink">Completed</a></li>
+                            <li><a href="#" class="duetodayLink">Today</a> <span class="todaycount"></span></li>
+                            <li><a href="#" class="completedtasksLink">Completed</a><span class="completecount"></span></li>
                         </ul>
 
+                    </div><!--end do switcher col-->
 
-                    </div>
+                    </div><!--end sidebar col-->
 
-                    <!--end do switcher-->
-
-                    
-
-
-                    <div class="duetoday show">
+                    <div class="col-md-9 pull-right">
+                        
+                       <div class="duetoday show">
 
 
                             <form action="" id="todaytodoSubmit">
@@ -116,53 +119,44 @@
 
                             </form>
 
-                            <div class="duetodayleft"></div>
 
                             <ul class="duetodayul dos"></ul>
+
+
+                        
 
                    
 
                     </div><!--end due today-->
 
-                     <div class="duetomorrow">
-
-
-
-                    
-
-                 <div class="duetomorrowleft"></div>
-
-                   <ul class="duetomorrowul dos"></ul>
-
-                    
-
-                    </div> 
-
-                    <!--end due tomorrow -->
-
-
                     <div class="completedtasks">
 
                         <hr>
                     
-                    <div class="completeleft"></div>
-                    <ul class="completeditemsul dos"></ul>
+                        <ul class="completeditemsul dos"></ul>
                       
                       <button class="btn reset">Clear Completed</button>
 
                     </div><!--end completed tasks -->
+
+
+                    </div><!--end todo area-->
+
+                    </div><!--end row-->
+
+
+                    
                     
 
 
-                </div> <!--end the to-doer-->
 
            
 
-            <div class="footer">
-               
-            </div><!--end
+            
 
-        </div>
+        </div><!--end the dooer-->
+
+    </div><!--end contain-->
 
 
         <!-- build:js scripts/vendor.js -->
